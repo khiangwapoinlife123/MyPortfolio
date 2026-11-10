@@ -357,7 +357,7 @@
 
     /* Profile details: two columns on desktop so the page stays readable */
     @media (min-width: 1024px) {
-      main > section .profile-details { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px; align-content: center; }
+      main > section .profile-details { display: grid !important; grid-template-columns: 1fr 1fr 1fr; gap: 10px; align-content: center; }
       .profile-details > * { margin-top: 0 !important; }
       .profile-details > :first-child, .profile-details > :last-child, .profile-details > .pd-wide { grid-column: 1 / -1; }
       .profile-details > div.p-3 { display: flex; flex-direction: column; justify-content: center; }
@@ -1090,6 +1090,15 @@
       .edu-grid > .edu-card:not([data-ach]) .edu-logo { width: 84px !important; height: 84px !important; flex-basis: 84px !important; }
       .edu-grid > .edu-card:not([data-ach]) .edu-name { font-size: 14px; }
     }
+      /* Personal Information: give the details panel more room so the page needs less shrinking */
+    @media (min-width: 1024px) {
+      #about .lg\:col-span-8.portfolio-card > .sm\:col-span-5 { grid-column: span 4 / span 4; }
+      #about .lg\:col-span-8.portfolio-card > .sm\:col-span-7 { grid-column: span 8 / span 8; padding: 20px 22px; }
+      #about .profile-details > div.p-3 { padding: 9px 12px; }
+      #about .profile-details > div.p-3 > p { font-size: 15px; }
+      #about .about-left > .portfolio-card:first-child { padding: 22px 24px; }
+      #about .about-left > .portfolio-card:first-child .pt-6 { padding-top: 14px; margin-top: 14px; }
+    }
   </style>
 </head>
 <body class="min-h-screen w-full selection:bg-orange-500 selection:text-black">
@@ -1650,7 +1659,7 @@
               </div>
 
               <!-- Address -->
-              <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 pd-wide">
                 <span class="font-mono-tech text-[11px] uppercase tracking-wider accent-text font-bold block">
                   ADDRESS
                 </span>
@@ -3055,12 +3064,19 @@
             var z = availH / h2;
             active.style.zoom = z.toFixed(3);
             // re-measure: photo thumbs grow with width when zoomed, so tighten until it fits
-            for (var it = 0; it < 4; it++) {
+            for (var it = 0; it < 6; it++) {
               var rb = active.getBoundingClientRect();
               var visH = rb.bottom - rb.top;
-              if (rb.bottom <= window.innerHeight - 14 + 0.5 || visH <= 0) break;
-              z = z * (availH / visH) * 0.995;
+              if (visH <= 0) break;
+              var over = rb.bottom > window.innerHeight - 14 + 0.5;
+              var nz = Math.min(1, z * (availH / visH) * 0.995);
+              if (!over && nz - z < 0.004) break;   // fits and can't grow meaningfully
+              z = nz;
               active.style.zoom = z.toFixed(3);
+            }
+            // safety: never leave it overflowing
+            for (var k = 0; k < 4 && active.getBoundingClientRect().bottom > window.innerHeight - 14 + 0.5; k++) {
+              z *= 0.97; active.style.zoom = z.toFixed(3);
             }
           }
         }
