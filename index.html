@@ -1099,6 +1099,8 @@
       #about .about-left > .portfolio-card:first-child { padding: 22px 24px; }
       #about .about-left > .portfolio-card:first-child .pt-6 { padding-top: 14px; margin-top: 14px; }
     }
+      @media (min-width: 1024px) { #about .profile-details > .pd-addr { grid-column: span 2 / span 2; } }
+    @media (max-width: 1023px) { #about .profile-details > .pd-addr { grid-column: 1 / -1; } }
   </style>
 </head>
 <body class="min-h-screen w-full selection:bg-orange-500 selection:text-black">
@@ -1588,6 +1590,16 @@
                 </p>
               </div>
 
+              <!-- Age -->
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+                <span class="font-mono-tech text-[11px] uppercase tracking-wider accent-text font-bold block">
+                  AGE
+                </span>
+                <p class="text-sm font-bold text-white mt-0.5">
+                  <span id="pdAge">18</span> years old
+                </p>
+              </div>
+
               <!-- 2. Where I Was Born -->
               <div class="p-3 rounded-xl bg-white/5 border border-white/10">
                 <span class="font-mono-tech text-[11px] uppercase tracking-wider accent-text font-bold block">
@@ -1659,7 +1671,7 @@
               </div>
 
               <!-- Address -->
-              <div class="p-3 rounded-xl bg-white/5 border border-white/10 pd-wide">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 pd-addr">
                 <span class="font-mono-tech text-[11px] uppercase tracking-wider accent-text font-bold block">
                   ADDRESS
                 </span>
@@ -3313,5 +3325,15 @@
     </figure>
     <button type="button" class="ach-lb-btn ach-lb-nav ach-lb-next" data-lb-next aria-label="Next photo">›</button>
   </div>
+  <script>
+    // Age updates itself every birthday (born June 16, 2008)
+    (function () {
+      var el = document.getElementById('pdAge'); if (!el) return;
+      var b = new Date(2008, 5, 16), n = new Date();
+      var age = n.getFullYear() - b.getFullYear();
+      if (n.getMonth() < b.getMonth() || (n.getMonth() === b.getMonth() && n.getDate() < b.getDate())) age--;
+      if (age > 0 && age < 120) el.textContent = age;
+    })();
+  </script>
 </body>
 </html>
