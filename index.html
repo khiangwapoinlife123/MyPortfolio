@@ -1656,48 +1656,7 @@
 
   <!-- RACE TRACK STRIP (bottom) + PAGE-SWITCH SWOOSH -->
   <div id="raceTrack" aria-hidden="true"><div class="rt-lane"></div></div>
-  <div id="raceCar" class="race-car" aria-hidden="true"><span class="rc-trail"></span><svg class="rc-svg" viewBox="0 0 254 80" aria-hidden="true">
-  <defs>
-    <linearGradient id="rcBodyS" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff1c7"/><stop offset=".3" stop-color="#e8bf62"/><stop offset=".65" stop-color="#b9862c"/><stop offset="1" stop-color="#6e4b14"/>
-    </linearGradient>
-    <linearGradient id="rcGlassS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a6370" stop-opacity=".9"/><stop offset="1" stop-color="#14171c" stop-opacity=".85"/></linearGradient>
-    <radialGradient id="rcRimS"><stop offset="0" stop-color="#fff3cf"/><stop offset=".55" stop-color="#d4a548"/><stop offset="1" stop-color="#6b4810"/></radialGradient>
-  </defs>
-  <ellipse cx="122" cy="73" rx="112" ry="5" fill="rgba(0,0,0,.55)"/>
-  <!-- seats + headrests (open top) -->
-  <path d="M98 42 Q99 30 107 30 Q114 30 115 42 Z" fill="#141416" stroke="#3a2a0c" stroke-width="1"/>
-  <path d="M116 43 Q117 33 124 33 Q130 33 131 43 Z" fill="#1c1c20" stroke="#3a2a0c" stroke-width="1"/>
-  <!-- windshield -->
-  <path d="M139 43 L127 27 L131 26.5 L145 42 Z" fill="url(#rcGlassS)" stroke="#f3d58e" stroke-width="1.1" stroke-linejoin="round"/>
-  <!-- body: long hood, short tail, smooth curves -->
-  <path d="M10 58 Q8 47 18 44 Q40 39.5 70 40 L97 41 Q104 44.5 120 44.5 L140 43.5 L150 41 Q190 39.5 222 45 Q236 48 237.5 54 L237 59 Q235 62 228 62 L208 62 A20 20 0 0 0 170 62 L80 62 A20 20 0 0 0 42 62 L16 62 Q10 62 10 58 Z"
-        fill="url(#rcBodyS)" stroke="#5a3d0e" stroke-width="1.2"/>
-  <!-- character line + highlight -->
-  <path d="M20 47.5 Q120 46 228 49.5" fill="none" stroke="rgba(255,248,225,.8)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M152 44 Q190 42.5 218 46" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.2" stroke-linecap="round"/>
-  <!-- side mirror -->
-  <path d="M137 41 L135 37 L141 36.5 L142 40 Z" fill="#141416" stroke="#d4a548" stroke-width=".8"/>
-  <!-- door number plate -->
-  <rect x="104" y="48" width="40" height="12" rx="3" fill="#0f0f11" stroke="#f3d58e" stroke-width="1"/>
-  <text x="124" y="57.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="900" font-style="italic" font-size="10" fill="#f3d58e" letter-spacing=".5">CKC</text>
-  <!-- round headlight + taillight -->
-  <ellipse cx="230" cy="49.5" rx="4.2" ry="3" fill="#fff6d6" stroke="#8a6420" stroke-width=".8"/>
-  <ellipse cx="13" cy="48" rx="2.6" ry="2.2" fill="#ff5a2a"/>
-  <!-- silly tongue hanging from the front bumper -->
-  <g class="rc-tongue" style="transform-origin:234px 57px">
-    <path d="M231 56.5 Q246 54.5 249.5 62 Q251.5 71.5 243 72.5 Q235.5 73 235 65 Q234.5 60 231 59 Z" fill="#e8322e" stroke="#8f1512" stroke-width="1"/>
-    <path d="M238 59 Q243 63 242.5 69" fill="none" stroke="#a51d19" stroke-width="1.2" stroke-linecap="round"/>
-    <path d="M240 58.6 Q246 58.5 247.5 62" fill="none" stroke="rgba(255,190,180,.7)" stroke-width="1.1" stroke-linecap="round"/>
-  </g>
-  <!-- exhaust -->
-  <rect x="4" y="57" width="9" height="3" rx="1.5" fill="#2a2a2e"/>
-  <!-- wheels -->
-  <g class="rc-wheel" style="transform-origin:61px 62px"><circle cx="61" cy="62" r="15" fill="#0b0b0c"/><circle cx="61" cy="62" r="9" fill="url(#rcRimS)"/>
-    <path d="M61 54 L61 70 M53 62 L69 62 M55.5 56.5 L66.5 67.5 M66.5 56.5 L55.5 67.5" stroke="#3b2a0b" stroke-width="1.6"/><circle cx="61" cy="62" r="2.4" fill="#141416"/></g>
-  <g class="rc-wheel" style="transform-origin:189px 62px"><circle cx="189" cy="62" r="15" fill="#0b0b0c"/><circle cx="189" cy="62" r="9" fill="url(#rcRimS)"/>
-    <path d="M189 54 L189 70 M181 62 L197 62 M183.5 56.5 L194.5 67.5 M194.5 56.5 L183.5 67.5" stroke="#3b2a0b" stroke-width="1.6"/><circle cx="189" cy="62" r="2.4" fill="#141416"/></g>
-</svg></div>
+  
   <div id="raceSwoosh" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b></div>
 
   <!-- RACING BACKGROUND (original motorsport-style speed lines, gold) -->
@@ -1788,48 +1747,7 @@
     </div>
 
     <!-- Race track along the bottom of the intro -->
-    <div class="intro-track" aria-hidden="true"><div class="rt-lane"></div><div class="race-car intro-car" aria-hidden="true"><span class="rc-trail"></span><svg class="rc-svg" viewBox="0 0 254 80" aria-hidden="true">
-  <defs>
-    <linearGradient id="rcBodyI" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff1c7"/><stop offset=".3" stop-color="#e8bf62"/><stop offset=".65" stop-color="#b9862c"/><stop offset="1" stop-color="#6e4b14"/>
-    </linearGradient>
-    <linearGradient id="rcGlassI" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a6370" stop-opacity=".9"/><stop offset="1" stop-color="#14171c" stop-opacity=".85"/></linearGradient>
-    <radialGradient id="rcRimI"><stop offset="0" stop-color="#fff3cf"/><stop offset=".55" stop-color="#d4a548"/><stop offset="1" stop-color="#6b4810"/></radialGradient>
-  </defs>
-  <ellipse cx="122" cy="73" rx="112" ry="5" fill="rgba(0,0,0,.55)"/>
-  <!-- seats + headrests (open top) -->
-  <path d="M98 42 Q99 30 107 30 Q114 30 115 42 Z" fill="#141416" stroke="#3a2a0c" stroke-width="1"/>
-  <path d="M116 43 Q117 33 124 33 Q130 33 131 43 Z" fill="#1c1c20" stroke="#3a2a0c" stroke-width="1"/>
-  <!-- windshield -->
-  <path d="M139 43 L127 27 L131 26.5 L145 42 Z" fill="url(#rcGlassI)" stroke="#f3d58e" stroke-width="1.1" stroke-linejoin="round"/>
-  <!-- body: long hood, short tail, smooth curves -->
-  <path d="M10 58 Q8 47 18 44 Q40 39.5 70 40 L97 41 Q104 44.5 120 44.5 L140 43.5 L150 41 Q190 39.5 222 45 Q236 48 237.5 54 L237 59 Q235 62 228 62 L208 62 A20 20 0 0 0 170 62 L80 62 A20 20 0 0 0 42 62 L16 62 Q10 62 10 58 Z"
-        fill="url(#rcBodyI)" stroke="#5a3d0e" stroke-width="1.2"/>
-  <!-- character line + highlight -->
-  <path d="M20 47.5 Q120 46 228 49.5" fill="none" stroke="rgba(255,248,225,.8)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M152 44 Q190 42.5 218 46" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.2" stroke-linecap="round"/>
-  <!-- side mirror -->
-  <path d="M137 41 L135 37 L141 36.5 L142 40 Z" fill="#141416" stroke="#d4a548" stroke-width=".8"/>
-  <!-- door number plate -->
-  <rect x="104" y="48" width="40" height="12" rx="3" fill="#0f0f11" stroke="#f3d58e" stroke-width="1"/>
-  <text x="124" y="57.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="900" font-style="italic" font-size="10" fill="#f3d58e" letter-spacing=".5">CKC</text>
-  <!-- round headlight + taillight -->
-  <ellipse cx="230" cy="49.5" rx="4.2" ry="3" fill="#fff6d6" stroke="#8a6420" stroke-width=".8"/>
-  <ellipse cx="13" cy="48" rx="2.6" ry="2.2" fill="#ff5a2a"/>
-  <!-- silly tongue hanging from the front bumper -->
-  <g class="rc-tongue" style="transform-origin:234px 57px">
-    <path d="M231 56.5 Q246 54.5 249.5 62 Q251.5 71.5 243 72.5 Q235.5 73 235 65 Q234.5 60 231 59 Z" fill="#e8322e" stroke="#8f1512" stroke-width="1"/>
-    <path d="M238 59 Q243 63 242.5 69" fill="none" stroke="#a51d19" stroke-width="1.2" stroke-linecap="round"/>
-    <path d="M240 58.6 Q246 58.5 247.5 62" fill="none" stroke="rgba(255,190,180,.7)" stroke-width="1.1" stroke-linecap="round"/>
-  </g>
-  <!-- exhaust -->
-  <rect x="4" y="57" width="9" height="3" rx="1.5" fill="#2a2a2e"/>
-  <!-- wheels -->
-  <g class="rc-wheel" style="transform-origin:61px 62px"><circle cx="61" cy="62" r="15" fill="#0b0b0c"/><circle cx="61" cy="62" r="9" fill="url(#rcRimI)"/>
-    <path d="M61 54 L61 70 M53 62 L69 62 M55.5 56.5 L66.5 67.5 M66.5 56.5 L55.5 67.5" stroke="#3b2a0b" stroke-width="1.6"/><circle cx="61" cy="62" r="2.4" fill="#141416"/></g>
-  <g class="rc-wheel" style="transform-origin:189px 62px"><circle cx="189" cy="62" r="15" fill="#0b0b0c"/><circle cx="189" cy="62" r="9" fill="url(#rcRimI)"/>
-    <path d="M189 54 L189 70 M181 62 L197 62 M183.5 56.5 L194.5 67.5 M194.5 56.5 L183.5 67.5" stroke="#3b2a0b" stroke-width="1.6"/><circle cx="189" cy="62" r="2.4" fill="#141416"/></g>
-</svg></div></div>
+    <div class="intro-track" aria-hidden="true"><div class="rt-lane"></div></div>
   </div>
 
   <!-- TOAST NOTIFICATION -->
